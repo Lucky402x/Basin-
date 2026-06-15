@@ -125,6 +125,14 @@ body{font-size:13px}
 .footer-brand,.footer-note{font-size:10px}
 .footer-right{gap:16px}
 }
+
+/* contract address bar */
+.ca-bar{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;padding:12px 16px;background:#0a0a0a;border:1px solid #1a1a1a;border-radius:6px;font-size:12px;margin:0 auto 40px;max-width:480px}
+.ca-bar .ca-label{font-size:9px;letter-spacing:0.2em;color:#666;text-transform:uppercase}
+.ca-bar .ca-addr{font-family:'SFMono-Regular',Consolas,monospace;color:#ccc;word-break:break-all;letter-spacing:0.02em}
+.ca-bar .ca-copy{background:none;border:1px solid #333;color:#888;font-size:10px;padding:4px 10px;border-radius:4px;cursor:pointer;letter-spacing:0.05em;transition:border-color 0.2s,color 0.2s}
+.ca-bar .ca-copy:hover{border-color:#555;color:#fff}
+@media(max-width:480px){.ca-bar{gap:8px;padding:8px 12px}.ca-bar .ca-addr{font-size:10px}}
 </style>
 </head>
 <body>
@@ -135,6 +143,11 @@ body{font-size:13px}
     <p class="hero-sub">ecosystems are</p>
     <p class="hero-h1">critical infrastructure.</p>
     <p class="hero-h2">BASIN makes nature investable.</p>
+    <div class="ca-bar">
+      <span class="ca-label">CA</span>
+      <span class="ca-addr">0x13f49addd372d532e231a100e4f156121f362ba3</span>
+      <button class="ca-copy" onclick="navigator.clipboard.writeText('0x13f49addd372d532e231a100e4f156121f362ba3');this.textContent='Copied';setTimeout(()=>{this.textContent='Copy'},1500)">Copy</button>
+    </div>
     <div class="hero-img"><div class="hero-img-art"></div></div>
   </section>
 
